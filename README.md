@@ -84,7 +84,7 @@ Before transcription, the recorded audio is cleaned:
 ### 4.1 Prerequisites
 
 - Python 3.10+
-- Git (optional, for cloning repository)
+- git clone https://github.com/DhananjayKingre/Smart-Medical-Conversation-Recorder.git
 
 ### 4.2 Create Virtual Environment
 
