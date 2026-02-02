@@ -1,0 +1,32 @@
+# Streamlit for web UI
+streamlit
+
+# Audio recording and processing
+sounddevice
+numpy
+scipy
+soundfile
+noisereduce
+
+# Speaker diarization
+pyannote.audio
+torch
+torchaudio
+
+# Environment variables
+python-dotenv
+
+# API requests
+requests
+
+# PDF processing
+PyPDF2
+
+# Groq API client
+groq
+
+# NLP embeddings and vector DB
+sentence-transformers
+faiss-cpu
+
+
