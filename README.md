@@ -120,7 +120,7 @@ GROQ_API_KEY=your_groq_api_key
 
 ```bash
 # Run the Streamlit app
-python -m streamlit run recorder.py
+python -m streamlit run ui_str.py
 ```
 
 ---
