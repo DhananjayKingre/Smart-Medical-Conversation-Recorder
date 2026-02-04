@@ -25,8 +25,8 @@ This project leverages **state-of-the-art audio processing and AI tools** to pro
 - **noisereduce**: Noise reduction to clean background noise from recorded audio.
 - **pyannote.audio**: Speaker diarization library that identifies different speakers in a conversation.
 - **Deepgram API**: Automatic speech-to-text transcription.
-- **Groq AI with LLaMA 3 model**: Provides a medical RAG (Retrieval-Augmented Generation) system to answer questions using the knowledge base.
-- **Faiss + Sentence Transformers**: For building vector-based search of medical PDFs to enable fast semantic retrieval of information.
+- **Groq AI with LLaMA 3 model**: Used for AI-powered clinical information extraction and medical reasoning from doctor–patient conversations, generating structured medical insights and responses.
+
 
 ### 1.2 Why These Techniques Are Used
 
@@ -65,8 +65,8 @@ Before transcription, the recorded audio is cleaned:
 4. **Transcription**:  
    - Audio segments are sent to **Deepgram API** for speech-to-text conversion.
 
-5. **Symptom Detection**:  
-   - Extracted transcript is compared with `disease_db.json` to identify symptoms and possible diseases.
+5. **AI Clinical Information Extraction**:  
+   - Extracts structured clinical information from doctor–patient conversations, including symptoms, diagnosis, medical history, prescriptions, and other relevant medical details.
 
 6. **Medical RAG System with LLaMA 3**:  
    - Using **Groq API with LLaMA 3 model**, the system answers user questions based on detected diseases, symptoms, and a medical PDF knowledge base.
@@ -130,9 +130,8 @@ python -m streamlit run ui_str.py
 ```
 Smart-Medical-Recorder/
 │
-├─ recorder.py                 # Main Streamlit app for recording and analysis
-├─ ai_doctor_chat.py           # AI Doctor chat logic and RAG implementation using LLaMA 3
-├─ disease_db.json             # Symptom-to-disease mapping
+├─ ui_str.py                 # Main Streamlit app for recording and analysis
+├─ backend.py           # AI Doctor chat logic and RAG implementation using LLaMA 3
 ├─ .env                        # API keys
 ├─ temp/                       # Temporary folder for audio processing
 └─ README.md                   # Project documentation
